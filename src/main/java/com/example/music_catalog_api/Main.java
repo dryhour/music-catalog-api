@@ -31,46 +31,51 @@ public class Main implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        /*
         songRepository.deleteAll();
         artistRepository.deleteAll();
         playlistRepository.deleteAll();
+        */
+        if (songRepository.count() == 0 && artistRepository.count() == 0 && playlistRepository.count() == 0) {
+            Song song1 = new Song("Phantom Bride", "Rock", 293);
+            Song song2 = new Song("Xenon", "Rock", 197);
+            Song song3 = new Song("Gore", "Rock", 299);
+            Song song4 = new Song("Hearts / Wires", "Rock", 320);
 
-        Song song1 = new Song("Phantom Bride", "Rock", 293);
-        Song song2 = new Song("Xenon", "Rock", 197);
-        Song song3 = new Song("Gore", "Rock", 299);
-        Song song4 = new Song("Hearts / Wires", "Rock", 320);
+            songRepository.saveAll(List.of(song1, song2, song3, song4));
 
-        songRepository.saveAll(List.of(song1, song2, song3, song4));
+            Artist artist1 = new Artist();
+            artist1.setUsername("Deftones");
+            artist1.setGenre("Rock");
+            artist1.setSongIds(List.of(
+                song1.getId(),
+                song2.getId(),
+                song3.getId(),
+                song4.getId()
+            ));
+            artistRepository.save(artist1);
 
-        Artist artist1 = new Artist();
-        artist1.setUsername("Deftones");
-        artist1.setGenre("Rock");
-        artist1.setSongIds(List.of(
-            song1.getId(),
-            song2.getId(),
-            song3.getId(),
-            song4.getId()
-        ));
-        artistRepository.save(artist1);
+            song1.setArtistId(artist1.getId());
+            song2.setArtistId(artist1.getId());
+            song3.setArtistId(artist1.getId());
+            song4.setArtistId(artist1.getId());
+            songRepository.saveAll(List.of(song1, song2, song3, song4));
 
-        song1.setArtistId(artist1.getId());
-        song2.setArtistId(artist1.getId());
-        song3.setArtistId(artist1.getId());
-        song4.setArtistId(artist1.getId());
-        songRepository.saveAll(List.of(song1, song2, song3, song4));
+            Playlist playlist1 = new Playlist();
+            playlist1.setTitle("Gore");
+            playlist1.setGenre("Rock");
+            playlist1.setArtistId(artist1.getId());
+            playlist1.setSongIds(List.of(
+                song1.getId(),
+                song2.getId(),
+                song3.getId(),
+                song4.getId()
+            ));
+            playlistRepository.save(playlist1);
 
-        Playlist playlist1 = new Playlist();
-        playlist1.setTitle("Gore");
-        playlist1.setGenre("Rock");
-        playlist1.setArtistId(artist1.getId());
-        playlist1.setSongIds(List.of(
-            song1.getId(),
-            song2.getId(),
-            song3.getId(),
-            song4.getId()
-        ));
-        playlistRepository.save(playlist1);
-
-        logger.info("Sample data inserted!");
+            logger.info("Sample data inserted!");
+        } else {
+            logger.info("Data already exists, skipping sample data insertion.");
+        }
     }
 }
