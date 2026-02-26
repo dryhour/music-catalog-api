@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.music_catalog_api.MusicCatalogApiApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-02-26T22:20:17.287Z" hostname="Mac.lan" time="1.142">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.example.music_catalog_api.MusicCatalogApiApplicationTests" time="0.307"/>
+  <system-out><![CDATA[17:20:17.342 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.music_catalog_api.MusicCatalogApiApplicationTests]: MusicCatalogApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:20:17.380 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.music_catalog_api.MusicCatalogApiApplication for test class com.example.music_catalog_api.MusicCatalogApiApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.3)
+
+2026-02-26T17:20:17.513-05:00  INFO 59898 --- [    Test worker] c.e.m.MusicCatalogApiApplicationTests    : Starting MusicCatalogApiApplicationTests using Java 17.0.18 with PID 59898 (started by drp in /Users/drp/CodingProjects/music-catalog-api)
+2026-02-26T17:20:17.513-05:00  INFO 59898 --- [    Test worker] c.e.m.MusicCatalogApiApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-02-26T17:20:17.694-05:00  INFO 59898 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-02-26T17:20:17.712-05:00  INFO 59898 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 3 MongoDB repository interfaces.
+2026-02-26T17:20:17.818-05:00  INFO 59898 --- [    Test worker] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.3"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "aarch64", "version": "26.3"}, "platform": "Java/Homebrew/17.0.18+0"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@52ecc989, com.mongodb.Jep395RecordCodecProvider@756808cc, com.mongodb.KotlinCodecProvider@52f8a6f4, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-02-26T17:20:17.825-05:00  INFO 59898 --- [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6143916, minRoundTripTimeNanos=0}
+2026-02-26T17:20:18.060-05:00  INFO 59898 --- [    Test worker] c.e.m.MusicCatalogApiApplicationTests    : Started MusicCatalogApiApplicationTests in 0.627 seconds (process running for 1.14)
+2026-02-26T17:20:18.118-05:00  INFO 59898 --- [    Test worker] com.example.music_catalog_api.Main       : Sample data inserted!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

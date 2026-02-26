@@ -1,0 +1,26 @@
+package com.example.music_catalog_api.controllers;
+
+import com.example.music_catalog_api.models.Artist;
+import com.example.music_catalog_api.repositories.ArtistRepository;
+
+import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+
+@RestController
+@RequestMapping("/artists")
+public class ArtistController {
+
+    @Autowired
+    private ArtistRepository artistRepository;
+
+    @GetMapping
+    public List<Artist> getAllArtists() {
+        return artistRepository.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public Artist getArtistById(@PathVariable String id) {
+        return artistRepository.findById(id).orElse(null);
+    }
+}

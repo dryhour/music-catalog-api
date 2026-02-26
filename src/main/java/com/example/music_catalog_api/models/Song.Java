@@ -1,4 +1,4 @@
-package com.example.music_catalog_api;
+package com.example.music_catalog_api.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -11,6 +11,12 @@ public class Song {
     private String artistId;
     private String genre;
     private int durationSeconds;
+
+    public Song(String title, String genre, int durationSeconds) {
+        this.title = title;
+        this.genre = genre;
+        this.durationSeconds = durationSeconds;
+    }
 
     public String getId() { return id; }
     public String getTitle() { return title; }
